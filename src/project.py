@@ -1,3 +1,7 @@
+import os
+import shutil
+import re
+
 def main():
     formatFileType(type_filter)
     identifyFileType()
@@ -45,6 +49,7 @@ rename the file with an appended number if there is another file with its name i
     }
 
 #If user provided a new base, check for skip command or sanitize and use it
+#probably going to implement this in another function AFTER sorting so file names can be compared
 if new_base:
     if new_base.lower() in {"skip", "s"}:
         print(f"User requested skip for '{filename}', leaving file name unchanged.")
@@ -56,7 +61,12 @@ if new_base:
 
 def sortFile(filename):
     {
-
+    """use if to determine where the file should be placed
+    
+    parameter: file to sort
+    return: correctly sorts the file into the folder
+    also, return a string like "file successfully sorted into XYZ" or "new file/folder successfully created"
+    or whatever else you want happening here..."""
     }
 
 if __name__ == '__main__':

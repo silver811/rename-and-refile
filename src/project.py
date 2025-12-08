@@ -50,6 +50,7 @@ rename the file with an appended number if there is another file with its name i
 
 #If user provided a new base, check for skip command or sanitize and use it
 #probably going to implement this in another function AFTER sorting so file names can be compared
+#into compareName you go
 if new_base:
     if new_base.lower() in {"skip", "s"}:
         print(f"User requested skip for '{filename}', leaving file name unchanged.")
@@ -58,6 +59,9 @@ if new_base:
     new_base = os.path.splitext(new_base)[0]
     new_base = new_base.replace(os.sep, "_")
     base_name = new_base
+
+def compareName():
+    {}
 
 def sortFile(filename):
     {

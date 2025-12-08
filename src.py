@@ -14,8 +14,9 @@ then place it in the proper folder.
 import shutil
 import os
 
-unsorted_folder = "C:\Users"
-project_folder_path = "C:\Users"
+unsorted_folder = "C:\Users\thuya\Downloads"
+work_folder_path = "C:\College"
+project_folder_path = "C:\Personal Projects"
 
 for filename in os.listdir(unsorted_folder):
     path, filetype = os.path.splitext(filename)

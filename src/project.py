@@ -16,23 +16,20 @@ unsorted_folder = r"\Users\thuya\Downloads"
 type_filter = input("File Extension Requested (comma-separated, leave blank for all):").strip(),
 
 def formatFileType(type_filter):
-    {
-        #return a formatted list of file extension types
-        type_filter = {ext.lower().strip().lstrip(".")
-            for ext in type_filter.split(",")
-            if ext.strip()}
-            if type_filter else set()
-            }
-    #return list as extension_list
+    #return a formatted list of file extension types
+    if type_filter:
+        type_filter = {ext.lower().strip().lstrip(".") for ext in type_filter.split(",") if ext.strip()}
+    else:
+        type_filter = set()
 
+    #return list as extension_list
 def identifyFileType(extension_list):
     {
     #find all files in unsorted_folder with the extensions in extension_list
     }
 
 def renameFile(filename):
-    {
-        """
+    """
 reassign a new name to a given file
 provide note prompting the naming convention for either folder to sort in
 
@@ -43,10 +40,9 @@ include a way to skip over renaming and return the original filename
 rename the file with an appended number if there is another file with its name in existence
 (ZZZ is the placeholder for where the appended changing number will be)
 """
-        print(f"\nFile: {filename}")
-        new_base = input(f"Rename base (no extension) or press Enter to keep '{base_name}': ").strip()
-        return new_base
-    }
+    print(f"\nFile: {filename}")
+    new_base = input(f"Rename base (no extension) or press Enter to keep '{base_name}': ").strip()
+    return new_base
 
 #If user provided a new base, check for skip command or sanitize and use it
 #probably going to implement this in another function AFTER sorting so file names can be compared
@@ -59,6 +55,7 @@ if new_base:
     new_base = os.path.splitext(new_base)[0]
     new_base = new_base.replace(os.sep, "_")
     base_name = new_base
+
 
 def compareName():
     {}

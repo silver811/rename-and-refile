@@ -29,7 +29,7 @@ def identifyFileType(extension_list):
     }
 
 def renameFile(filename):
-    """
+    """ 
 reassign a new name to a given file
 provide note prompting the naming convention for either folder to sort in
 

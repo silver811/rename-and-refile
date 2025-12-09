@@ -23,9 +23,9 @@ def main():
         sortFile(source_path, updated_base, file_ext)
 
 # set paths to variables
-work_path = r"\College"
-personal_path = r"\Personal Projects"
-unsorted_folder = r"\Users\thuya\Downloads"
+work_path = r"\Users\TPN210003\College"
+personal_path = r"\Users\TPN210003\Personal Projects"
+unsorted_folder = r"\Users\TPN210003\Downloads"
 
 
 def formatFileType():
@@ -87,7 +87,7 @@ def renameFile(filename, base_name):
 
     # input for rename
     print(f"\nFile: {filename}")
-    new_base = input(f"Rename base (no extension) or press Enter to keep '{base_name}': ").strip()
+    new_base = input(f"Work Naming Convention: FOLDERNAME_FILENAMEPART\nPersonal Project Naming Convention: PROJECTFOLDER_TYPE_NAME\nRename base (no extension) or press Enter to keep '{base_name}': ").strip()
 
     # check for skip command
     if new_base:
